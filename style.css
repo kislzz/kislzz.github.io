@@ -1,0 +1,169 @@
+body {
+    background-color: var(--primary);
+}
+
+:root {
+    --secondary: rgb(28, 28, 28);
+    --primary: rgb(20, 20, 20);
+    --third: rgba(77, 77, 77, 0.5);
+
+    --white: rgba(255, 255, 255, 0.5);
+    --yellow: rgb(253 224 71);
+    --blue: rgb(59, 131, 246);
+}
+
+.nav-bar {
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+width: 9em;
+height: 5em;
+background-color: var(--secondary);
+border: 0.1em solid var(--third);
+border-radius: 0em;
+}
+
+.github-ic {
+position: absolute;
+width: 3em;
+left: 1em;
+top: 1em;
+z-index: 40;
+transition: 0.1s linear;
+cursor: pointer;
+z-index: 40;
+}
+
+.github-ic:hover {
+scale: 1.05;
+}
+
+.github-glow {
+position: absolute;
+left: 1em;
+top: 1em;
+filter: blur(0.75em);
+width: 3em;
+height: 3em;
+background-color: var(--white);
+opacity: 0.45;
+z-index: 30;
+
+}
+
+.instagram-ic {
+position: absolute;
+width: 3em;
+left: 5em;
+top: 1em;
+transition: 0.1s linear;
+cursor: pointer;
+z-index: 40;
+}   
+
+.instagram-ic:hover {
+scale: 1.05;
+}
+
+.instagram-glow {
+position: absolute;
+left: 5em;
+top: 1em;
+filter: blur(0.75em);
+width: 3em;
+height: 3em;
+background-color: var(--white);
+opacity: 0.45;
+z-index: 30;
+}
+
+.portfolio-btn {
+position: fixed;
+right: 1em;
+bottom: 1em;
+width: 2em;
+height: 2em;
+background-color: var(--secondary);
+border: 0.1em solid var(--third);
+border-radius: 0em;
+transition: 0.1s linear;
+}
+
+.portfolio-ic {
+position: absolute;
+width: 1em;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+transition: 0.1s linear;
+cursor: pointer;
+z-index: 40;
+}   
+
+.portfolio-glow {
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+filter: blur(0.75em);
+width: 2em;
+height: 2em;
+background-color: var(--white);
+opacity: 0.45;
+z-index: 30;
+}
+
+.loader-wrapper {
+position: absolute;
+left: 0%;
+top: 0%;
+width: 100%;
+height: 100%;
+background-color: var(--primary);
+z-index: 40;
+opacity: 1;
+animation: l6 0.25s linear forwards;
+animation-delay: 2.5s;
+animation-iteration-count: 1
+}
+
+.loader.fade-out {
+opacity: 0;
+}
+
+.loader {
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+width: 2em;
+aspect-ratio: .75;
+--c: no-repeat linear-gradient(#ffffff 0 0);
+background: 
+  var(--c) 0%   50%,
+  var(--c) 50%  50%,
+  var(--c) 100% 50%;
+animation: l7 1s infinite linear alternate;
+}
+@keyframes l7 {
+0%  {background-size: 20% 50% ,20% 50% ,20% 50% }
+20% {background-size: 20% 20% ,20% 50% ,20% 50% }
+40% {background-size: 20% 100%,20% 20% ,20% 50% }
+60% {background-size: 20% 50% ,20% 100%,20% 20% }
+80% {background-size: 20% 50% ,20% 50% ,20% 100%}
+100%{background-size: 20% 50% ,20% 50% ,20% 50% }
+}
+
+
+@keyframes l6
+{
+from
+{
+top: 0%;
+}
+to
+{
+top: -100%;
+}
+}
